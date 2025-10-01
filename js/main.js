@@ -162,3 +162,66 @@
 
     setInterval(finsNextSlide, 4000); // Auto slide every 4s
 
+
+
+    const customaiContentData = [
+      {
+        title: "AI and Intelligent Operations",
+        image: "https://via.placeholder.com/600x300?text=AI+and+Intelligent+Ops",
+        text: "Use AI-powered tools to optimize workflows, predict outcomes, and drive automation."
+      },
+      {
+        title: "Business & Industry Applications",
+        image: "https://via.placeholder.com/600x300?text=Business+Applications",
+        text: "Tailored software solutions for various industries to enhance productivity and innovation."
+      },
+      {
+        title: "Cybersecurity",
+        image: "https://via.placeholder.com/600x300?text=Cybersecurity",
+        text: "Advanced cybersecurity tools to protect data, systems, and networks from threats."
+      },
+      {
+        title: "Data and Analytics",
+        image: "https://via.placeholder.com/600x300?text=Data+and+Analytics",
+        text: "The tools you need to distill complex data into clear, actionable insights — to predict outcomes, profile customers, optimize operations and identify new opportunities through data patterns and market analysis."
+      },
+      {
+        title: "Sovereign Collaboration",
+        image: "https://via.placeholder.com/600x300?text=Sovereign+Collaboration",
+        text: "Collaborate across borders with secure, sovereign data sharing frameworks and policies."
+      },
+      {
+        title: "Specialized Software",
+        image: "https://via.placeholder.com/600x300?text=Specialized+Software",
+        text: "Custom software designed for unique business needs and domain-specific challenges."
+      },
+      {
+        title: "Total Experience",
+        image: "https://via.placeholder.com/600x300?text=Total+Experience",
+        text: "Enhance customer, employee, and user experience with integrated technology solutions."
+      },
+    ];
+
+    function customaiShowContent(index) {
+      const content = customaiContentData[index];
+      const contentDiv = document.getElementById("customai-content");
+
+      contentDiv.innerHTML = `
+        <div class="customai-content-image">
+          <img src="${content.image}" alt="${content.title}" />
+        </div>
+        <div class="customai-content-text">
+          <h2>${content.title}</h2>
+          <p>${content.text}</p>
+          <a href="#" class="customai-learn-more">Learn more →</a>
+        </div>
+      `;
+
+      // Update active state
+      const buttons = document.querySelectorAll(".customai-menu-item");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      buttons[index].classList.add("active");
+    }
+
+    // Load default content on first render
+    customaiShowContent(0);
