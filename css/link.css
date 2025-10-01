@@ -677,3 +677,136 @@ footer {
 }
 
 }
+
+
+/* software start */
+ .softwares {
+      margin: 0;
+      /* font-family: Arial, sans-serif; */
+      background-color: #f2f9fb;
+    }
+
+.custom-hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 8%;
+      background: #f5fbfd;
+      border-radius: 10px;
+      flex-wrap: wrap;
+    }
+
+    .custom-hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .custom-hero-text h1 {
+      font-size: 2.5rem;
+      color: #0d1b2a;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .custom-hero-text p {
+      font-size: 1rem;
+      color: #4b4b4b;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .custom-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .custom-btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .custom-btn-primary {
+      background-color: #027f89;
+      color: #fff;
+    }
+
+    .custom-btn-primary:hover {
+      background-color: #01636a;
+    }
+
+    .custom-btn-outline {
+      background: #fff;
+      border: 1px solid #ccc;
+      color: #333;
+    }
+
+    .custom-btn-outline:hover {
+      background: #f0f0f0;
+    }
+
+    .custom-bottom-links {
+      display: flex;
+      gap: 20px;
+      font-size: 0.9rem;
+      color: #222;
+      align-items: center;
+    }
+
+    .custom-bottom-links span {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .custom-bottom-links span:first-child::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #000;
+      bottom: -3px;
+      left: 0;
+    }
+
+    .custom-pause-btn {
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .custom-hero-img {
+      flex: 1;
+      text-align: center;
+      min-width: 300px;
+    }
+
+    .custom-hero-img img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .custom-hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .custom-hero-text {
+        margin-bottom: 30px;
+      }
+      .custom-buttons {
+        justify-content: center;
+      }
+      .custom-bottom-links {
+        justify-content: center;
+      }
+    }
+/*software end */
