@@ -6189,7 +6189,8 @@ fieldset:disabled .btn {
   justify-content: flex-start !important;
 }
 .justify-content-end {
-  justify-content: flex-end !important;
+  justify-content: center !important; 
+  /* because i wanted to make the footer in the center and i didnot wanted to change all the html files*/
 }
 .justify-content-center {
   justify-content: center !important;
