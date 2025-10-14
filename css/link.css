@@ -693,6 +693,24 @@ background: linear-gradient(to left, #FFFFFF, #86e7fa, #8bd0d8); /* W3C, IE 10+/
   flex-wrap: wrap;
 }
 
+.customs-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 8%;
+ background: #79cec7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FFFFFF, #87f8f8, #81dedd);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FFFFFF, #86faf6, #8bd8d3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      
+
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+
+
+
 .custom-hero-text {
   flex: 1;
   min-width: 300px;
@@ -706,6 +724,10 @@ background: linear-gradient(to left, #FFFFFF, #86e7fa, #8bd0d8); /* W3C, IE 10+/
 }
 
 .custom-hero-text p {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
   font-size: 1rem;
   color: #4b4b4b;
   margin-bottom: 30px;
@@ -809,12 +831,15 @@ background: linear-gradient(to left, #FFFFFF, #86e7fa, #8bd0d8); /* W3C, IE 10+/
 /*software end */
 
 /* software second part start  */
-.saitop {
+ .saitop {
+  padding: 40px;
   text-align: center;
   justify-content: center;
-  justify-self: center;
-  padding: 40px;
+  text-align: center;
+ justify-self: center;
+ justify-items: center;
 }
+  
 .customai-wrapper {
   background-color: #eff9f9;
   max-width: 1200px;
@@ -828,6 +853,8 @@ background: linear-gradient(to left, #FFFFFF, #86e7fa, #8bd0d8); /* W3C, IE 10+/
 }
 
 .customai-sidebar {
+ 
+  
   width: 500px;
   padding-right: 20px;
   border-right: 1px solid #e6e6e6;
@@ -859,10 +886,46 @@ background: linear-gradient(to left, #FFFFFF, #86e7fa, #8bd0d8); /* W3C, IE 10+/
 .customai-menu-item:hover,
 .customai-menu-item.active {
   background-color: #e9f9ff;
-  color: #0078d4;
+  color:rgba(0, 53, 198, 0.771);
 }
 
 .customai-menu-item i {
+  margin-right: 12px;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+
+.customai-menu-items {
+  /* justify-content: center; */
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  color: #000;
+  text-align: left;
+  width: 100%;
+}
+
+.customai-menu-items:hover,
+.customai-menu-items.active {
+  background-color: #e9f9ff;
+  color: rgb(19, 19, 143);
+}
+
+
+.customai-menu-items .fas{
+  justify-content: center;
+  /* background: #d60707; */
+  color: black !important;
   margin-right: 12px;
   font-size: 18px;
   width: 20px;
