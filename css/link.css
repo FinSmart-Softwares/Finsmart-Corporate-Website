@@ -700,7 +700,8 @@ background: linear-gradient(to left, #FFFFFF, #86e7fa, #8bd0d8);
   padding: 40px 8%;
  background: #c6f6f2;  
 background: -webkit-linear-gradient(to left, #FFFFFF, #b6fcfc, #d6fffe);  
-background: linear-gradient(to left, #ffffff, #bafffd, #c2f8f4);
+background: linear-gradient(to left, #ffffff, #bafffd, #c2f8f4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       
 
   border-radius: 10px;
