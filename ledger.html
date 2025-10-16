@@ -81,7 +81,7 @@
                         </h6>
                       </a>
 
-                      <a href="">
+                      <a href="software.html">
                         <h6 class="category">
                           <i class="fas fa-code"></i> Software
                           <span class="arrow"
@@ -191,11 +191,11 @@
                         <span class="arrow"
                           ><i class="fa-solid fa-arrow-right"></i></span
                       ></a>
-                      <a href="ledger.html" class="dropdown-item"
+                      <!-- <a href="ledger.html" class="dropdown-item"
                         >Finsmart CRM
                         <span class="arrow"
                           ><i class="fa-solid fa-arrow-right"></i></span
-                      ></a>
+                      ></a> -->
                       <a class="dropdown-item" href="https://finsmartFPO.com"
                         >Finsmart FPO
                         <span class="arrow"
@@ -285,23 +285,29 @@ We simplify every step of your business journey with precision and speed.</p>
 
   
    </div>
-   <div class="customai-wrapper " style="margin-bottom: 60px !important; background-color: #bbfbf9">
+   <div class="customai-wrapper " style="margin-bottom: 60px !important; background-color: #e6faf9 ; border: 1px solid #01898e;">
     <div class="customai-sidebar"  style="margin-bottom: 60px;">
-      <div class="customai-sidebar-title">Solutions for Every Need and Challenge</div>
-      <button class="customai-menu-items active" onclick="customaiShowContent(0)">
-        <i class="fas fa-brain"></i> Order Management
+      <div class="customai-sidebar-title">Solutions for Every Need & Challenge</div>
+      <button class="customai-menu-items moko active" onclick="customaiShowContent(0)">
+       <i class="fas fa-tshirt"></i>Clothing Try-On
       </button>
-      <button class="customai-menu-items" onclick="customaiShowContent(1)">
-        <i class="fas fa-industry"></i> Digital reciept
+      <button class="customai-menu-items moko " onclick="customaiShowContent(1)">
+       <i class="fas fa-box"></i>  Order Management
       </button>
-      <button class="customai-menu-items" onclick="customaiShowContent(2)">
-        <i class="fas fa-shield-alt"></i> Manufacturing process
+
+      <button class="customai-menu-items moko" onclick="customaiShowContent(2)">
+       <i class="fas fa-receipt"></i> Digital reciept
+
       </button>
-      <button class="customai-menu-items" onclick="customaiShowContent(3)">
+      <button class="customai-menu-items moko" onclick="customaiShowContent(3)">
+        <i class="fas fa-industry"></i> Manufacturing process
+      </button>
+      <button class="customai-menu-items moko" onclick="customaiShowContent(4)">
         <i class="fas fa-chart-pie"></i> Inventory Warehouse Management
       </button>
-      <button class="customai-menu-items" onclick="customaiShowContent(4)">
-        <i class="fas fa-handshake"></i>  B2B & B2C
+      <button class="customai-menu-items moko" onclick="customaiShowContent(5)">
+       <i class="fas fa-store"></i>
+ B2B & B2C
       </button>
      
     </div>
@@ -480,16 +486,20 @@ We simplify every step of your business journey with precision and speed.</p>
       </div>
     </div>
     <!-- Footer End -->
-             <script >
-          
+        <script>
 const customaiContentData = [
+  {
+    title: "Clothing Try-On",
+    video: "video/clothing.mp4",
+    text: "Change the clothing in any model photo using a reference image—whether it's from someone wearing the outfit or a product photo."
+  },
   {
     title: "Order Management",
     image: "img/l1.png",
-    text: "The order lifecycle starts with the customer placing an order and backend checks like payment and fulfillment.It ends with shipping, invoice generation, and delivery to the customer."
+    text: "The order lifecycle starts with the customer placing an order and backend checks like payment and fulfillment. It ends with shipping, invoice generation, and delivery to the customer."
   },
   {
-    title: "Digital reciept",
+    title: "Digital receipt",
     image: "img/l2.png",
     text: "Customers can easily access their digital receipts by scanning a QR code, ensuring secure and instant access to transaction details anytime."
   },
@@ -506,33 +516,40 @@ const customaiContentData = [
   {
     title: "B2B & B2C",
     image: "img/l5.png",
-    text: "FinSmart Ledger handles both B2B and B2C operations, streamlining sales, invoicing, and customer workflows on one platform." },
-  
+    text: "FinSmart Ledger handles both B2B and B2C operations, streamlining sales, invoicing, and customer workflows on one platform."
+  },
 ];
 
-    function customaiShowContent(index) {
-      const content = customaiContentData[index];
-      const contentDiv = document.getElementById("customai-content");
+function customaiShowContent(index) {
+  const content = customaiContentData[index];
+  const contentDiv = document.getElementById("customai-content");
 
-      contentDiv.innerHTML = `
-        <div class="customai-content-image">
-          <img src="${content.image}" alt="${content.title}" />
-        </div>
-        <div class="customai-content-text">
-          <h2>${content.title}</h2>
-          <p>${content.text}</p>
-           <a href="#" class="customai-learn-more">Learn more →</a>
-        </div>
-      `;
+  // check whether content has video or image
+  const media = content.video
+    ? `<video src="${content.video}" autoplay loop muted playsinline></video>`
+    : `<img src="${content.image}" alt="${content.title}" />`;
 
-      // Update active state
-      const buttons = document.querySelectorAll(".customai-menu-items");
-      buttons.forEach(btn => btn.classList.remove("active"));
-      buttons[index].classList.add("active");
-    }
+  contentDiv.innerHTML = `
+    <div class="customai-content-image">
+      ${media}
+    </div>
+    <div class="customai-content-text">
+      <h2>${content.title}</h2>
+      <p>${content.text}</p>
+      <a href="#" class="customai-learn-more" style="color:#01898e;">Learn more →</a>
+    </div>
+  `;
 
-    // Load default content on first render
-    customaiShowContent(0);
-         </script>
+  // Update active button state
+  const buttons = document.querySelectorAll(".customai-menu-items");
+  buttons.forEach(btn => btn.classList.remove("active"));
+  buttons[index].classList.add("active");
+}
+
+// Load default content
+customaiShowContent(0);
+</script>
+
+
   </body>
 </html>
